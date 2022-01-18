@@ -12,14 +12,10 @@ class Contacts
 
     printPersons()
     {
-        for(let i in this)
-        {
-            for(let j in this[i])
-            {
-                console.log(this[i][j]);
-            }
+        
+        for(let i=0; i<this.array.length;i++){
+            this.array[i].printAll();
         }
-
     }
 }
 
