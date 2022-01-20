@@ -21,21 +21,22 @@ export class Vector
 
     public Add(v1:Vector):Vector
     {
-        let sum : Vector [];
+        let sum : Vector = new Vector(1,1);
+        sum.elements = [];
         this.elements.forEach(function(value,index)
         {
-            sum.push(value + v1[index]);
+            sum.elements =(value + v1[index]);
         });
-        return sum[0];
+        return sum;
     }
 
-    // public Subs(v1:Vector):Vector
-    // {
-    //     let sum : Vector [];
-    //     this.elements.forEach(function(value,index)
-    //     {
-    //         sum.push(value - v1[index]);
-    //     });
-    //     return sum[0];
-    // }
+//     public Subs(v1:Vector):Vector
+//     {
+        
+//         this.elements.forEach(function(value,index)
+//         {
+//             sum.push(value - v1[index]);
+//         });
+//         return sum[0];
+//     }
 }

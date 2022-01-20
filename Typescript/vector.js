@@ -13,11 +13,12 @@ var Vector = /** @class */ (function () {
         console.log(this.elements);
     };
     Vector.prototype.Add = function (v1) {
-        var sum;
+        var sum = new Vector(1, 1);
+        sum.elements = [];
         this.elements.forEach(function (value, index) {
-            sum.push(value + v1[index]);
+            sum.elements = (value + v1[index]);
         });
-        return sum[0];
+        return sum;
     };
     return Vector;
 }());
