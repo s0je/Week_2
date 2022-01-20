@@ -12,19 +12,19 @@ var Book = /** @class */ (function () {
     // Metodos Publicos
     // Metodos GET
     Book.prototype.getTitle = function () {
-        console.log(this.title);
+        return this.title;
     };
     Book.prototype.getNPages = function () {
-        console.log(this.nPages);
+        return this.nPages;
     };
     Book.prototype.getIsbn = function () {
-        console.log(this.isbn);
+        return this.isbn;
     };
     Book.prototype.getAuthor = function () {
         console.log(this.author);
     };
     Book.prototype.getEditorial = function () {
-        console.log(this.editorial);
+        return this.editorial;
     };
     // Metodo SET
     Book.prototype.setTitle = function (title) {

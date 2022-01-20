@@ -3,7 +3,7 @@ import { Book } from "./book"
 export class Library
 {
     // Declaracion de variables
-    private books: Book [];
+    private books: Book[];
     private address : String;
     private manager: string;
 
@@ -52,16 +52,11 @@ export class Library
     {
         return this.books.length;
     }
-    public findByAuthor(author:string):Book []
+    public findByAuthor(author:string):Book[] //No me sale
     {
-        let temp:string;
-        for(let i=0; i<this.books.length; i++)
+        return this.books.filter(function(valor)
         {
-            temp = this.books[i].getAuthor();
-            if(author == temp)
-            {
-               return this.books
-            }
-        }
+        valor.getAuthor() == author;
+        });
     }
 }
