@@ -31,17 +31,9 @@ var Library = /** @class */ (function () {
         return this.books.length;
     };
     Library.prototype.findByAuthor = function (author) {
-        for (var i = 0; i < this.books.length; i++) {
-            // for(let j=0; j<this.books.length[i]; j++)
-            // {
-            // if(this.books[i][j] === author)
-            // {
-            return this.books.filter(function (valor) {
-                valor.getAuthor() == author;
-            });
-            // }
-            // }
-        }
+        var book;
+        book = this.books.filter(function (nomb) { return nomb.getAuthor() == author; });
+        return book;
     };
     return Library;
 }());

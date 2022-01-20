@@ -21,7 +21,7 @@ var Book = /** @class */ (function () {
         return this.isbn;
     };
     Book.prototype.getAuthor = function () {
-        console.log(this.author);
+        return this.author;
     };
     Book.prototype.getEditorial = function () {
         return this.editorial;

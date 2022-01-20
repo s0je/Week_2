@@ -54,9 +54,8 @@ export class Library
     }
     public findByAuthor(author:string):Book[] //No me sale
     {
-        return this.books.filter(function(valor)
-        {
-        valor.getAuthor() == author;
-        });
+        let book : Book[];
+        book= this.books.filter(nomb => nomb.getAuthor() == author);
+        return book;
     }
 }
