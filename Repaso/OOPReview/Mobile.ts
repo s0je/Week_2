@@ -69,5 +69,10 @@ export class Mobile
         this.price = v;
     }
     
+    public toString():string
+    {
+        let mensaje = `The characteristics of ${this.name} are: \nName - ${this.name}\n Model - ${this.model}\n Trademark - ${this.trademark}\n SD Size - ${this.sdSize}\n Color - ${this.color}\n Is 5G? - ${this.is5G}\n Number of Cameras - ${this.cameraNumber}\n Price - ${this.price}.`;
+        return mensaje;
+    }
     
 }

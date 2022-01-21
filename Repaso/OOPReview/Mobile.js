@@ -60,6 +60,10 @@ var Mobile = /** @class */ (function () {
     Mobile.prototype.setprice = function (v) {
         this.price = v;
     };
+    Mobile.prototype.toString = function () {
+        var mensaje = "The characteristics of ".concat(this.name, " are: \nName - ").concat(this.name, "\n Model - ").concat(this.model, "\n Trademark - ").concat(this.trademark, "\n SD Size - ").concat(this.sdSize, "\n Color - ").concat(this.color, "\n Is 5G? - ").concat(this.is5G, "\n Number of Cameras - ").concat(this.cameraNumber, "\n Price - ").concat(this.price, ".");
+        return mensaje;
+    };
     return Mobile;
 }());
 exports.Mobile = Mobile;
