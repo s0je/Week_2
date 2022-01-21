@@ -11,4 +11,5 @@ var mobileLibrary = new MobileLibrary_1.MobileLibrary("The Phone house", "Calle 
 // console.log(mobileLibrary.getlocation());
 // console.log(mobileLibrary.getmobiles());
 // console.log(mobileLibrary.getname());
-mobileLibrary.totalPriceCalculation();
+console.log(mobileLibrary.totalPriceCalculation());
+mobileLibrary.printLibrary();

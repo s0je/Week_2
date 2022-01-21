@@ -40,14 +40,24 @@ export class MobileLibrary
         this.totalPrice = v;
     }
     
-    public totalPriceCalculation():void
+    public totalPriceCalculation()
     {
         let sum : number = 0;
         this.mobiles.forEach(function(item)
         {
             sum += item.getprice();
         })
-        console.log(sum);
+        return this.totalPrice = sum;
         
-    }    
+    }
+    
+    public printLibrary()
+    {
+        console.log("This are all my mobiles:")
+        for(let i=0; i<this.mobiles.length; i++)
+        {
+            console.log(this.mobiles[i].toString());
+        }
+        console.log("Price overall: "+this.totalPrice);
+    }
 }

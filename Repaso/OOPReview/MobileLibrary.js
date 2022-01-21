@@ -37,7 +37,14 @@ var MobileLibrary = /** @class */ (function () {
         this.mobiles.forEach(function (item) {
             sum += item.getprice();
         });
-        console.log(sum);
+        return this.totalPrice = sum;
+    };
+    MobileLibrary.prototype.printLibrary = function () {
+        console.log("This are all my mobiles:");
+        for (var i = 0; i < this.mobiles.length; i++) {
+            console.log(this.mobiles[i].toString());
+        }
+        console.log("Price overall: " + this.totalPrice);
     };
     return MobileLibrary;
 }());
