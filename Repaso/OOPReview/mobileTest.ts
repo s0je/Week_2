@@ -12,3 +12,4 @@ Nokia.setcameraNumber(4);
 console.log(Nokia.toString());
 console.log(Iphone.toString());
 console.log(Samsung.toString());
+console.log(Nokia.getprice());
