@@ -25,18 +25,20 @@ export class Vector
         sum.elements = [];
         this.elements.forEach(function(value,index)
         {
-            sum.elements =(value + v1[index]);
+            sum.elements[index] =(value + v1[index]);
         });
         return sum;
     }
 
-//     public Subs(v1:Vector):Vector
-//     {
+    // public Subs(v1:Vector):Vector
+    // {
+    //     let subs : Vector = new Vector (1,1);
+    //     subs.elements= [];
+    //     v1.elements.forEach(function(value, index)
+    //     {
+    //         subs.elements[index] = (value - this.elements[index]);
+    //     });
         
-//         this.elements.forEach(function(value,index)
-//         {
-//             sum.push(value - v1[index]);
-//         });
-//         return sum[0];
-//     }
+    //     return subs.elements;
+    // }
 }
