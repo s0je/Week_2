@@ -40,7 +40,7 @@ export class MobileLibrary
         this.totalPrice = v;
     }
     
-    public totalPriceCalculation()
+    private totalPriceCalculation()
     {
         let sum : number = 0;
         this.mobiles.forEach(function(item)
