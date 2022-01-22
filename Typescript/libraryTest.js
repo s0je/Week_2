@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var library_1 = require("./library");
+var book_1 = require("./book");
+var book1 = [new book_1.Book("Introducción a Javascript", 233, "2344433-BC23333", "Joseph Smith", "Now Editions")];
+var book2 = [new book_1.Book("Origen", 640, "22331-BC2233444", "Dan Brown", "Mondadori")];
+var book = [];
+book.push(book1);
+book.push(book2);
+var library = new library_1.Library(book, "Calle la Marina", "Pepito");
+console.log(library.getNumberOfBooks());
+console.log(library[1]);
