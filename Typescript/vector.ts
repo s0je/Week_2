@@ -1,15 +1,13 @@
-import { sumatorio } from "../../../../preoyectosJavascript/proyecto1/libreriaVector";
-
 export class Vector 
 {
-    private elements : Number[];
+    private elements : number[];
 
     constructor(n:number,k:number)
     {
-        let valor:Number[];
+        let valor:number[] = [0];
         for(let i=0 ; i<n; i++)
         {
-            valor.push(Math.floor(Math.random() * k));
+            valor[i] = Math.floor(Math.random() * k);
             this.elements= valor;
         }
     }
@@ -21,24 +19,46 @@ export class Vector
 
     public Add(v1:Vector):Vector
     {
-        let sum : Vector = new Vector(1,1);
+        let sum : Vector = new Vector(0,0);
         sum.elements = [];
         this.elements.forEach(function(value,index)
         {
-            sum.elements[index] =(value + v1[index]);
+            sum.elements[index] = (v1.elements[index] + value); 
         });
         return sum;
     }
 
-    // public Subs(v1:Vector):Vector
-    // {
-    //     let subs : Vector = new Vector (1,1);
-    //     subs.elements= [];
-    //     v1.elements.forEach(function(value, index)
-    //     {
-    //         subs.elements[index] = (value - this.elements[index]);
-    //     });
-        
-    //     return subs.elements;
-    // }
+    public Subs(v1:Vector):Vector
+    {
+        let subs : Vector = new Vector (1,1);
+        subs.elements= [];
+        this.elements.forEach(function(value,index)
+        {
+            subs.elements[index] = (value - v1.elements[index]);
+        });
+        return subs;
+    }
+
+    public Mult(v1:Vector):Vector
+    {
+        let mult : Vector = new Vector (0,0);
+        mult.elements=[];
+        this.elements.forEach(function(value,index)
+        {
+            mult.elements[index] = (value * v1.elements[index]);
+        });
+        return mult;
+    }
+
+    public multNumber(n:number):Vector
+    {
+        let temp : Vector = new Vector (0,0);
+        temp.elements = [];
+        this.elements.forEach(function(value,index)
+        {
+            temp.elements[index] = (value * n); 
+        });
+        return temp;
+    }
+
 }
