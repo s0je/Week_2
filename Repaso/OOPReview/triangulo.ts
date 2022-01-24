@@ -13,7 +13,7 @@ export class Triangulo
     }
 
     public calcularLongitudLados():number[] {
-        let longitudLados = [3];
+        let longitudLados = new Array (3);
        
         longitudLados[0] = this.x.calcularDistancia(this.y);
         longitudLados[1] = this.y.calcularDistancia(this.z);
