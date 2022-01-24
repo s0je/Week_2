@@ -14,7 +14,7 @@ export class Contacts
     {
         for(let i=0; i<this.people.length;i++)
         {
-            console.log(this.people[i]);
+            console.log("Name: "+this.people[i].name+"\nAge: "+this.people[i].age+"\nAddress: "+this.people[i].getAddress());
         }
     }
 }
